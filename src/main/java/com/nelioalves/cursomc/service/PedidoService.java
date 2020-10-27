@@ -13,7 +13,7 @@ import com.nelioalves.cursomc.service.exceptions.ObjectNotFoundException;
 public class PedidoService {
 	@Autowired
 	private PedidoRepository repo;
-	public Pedido buscar(Integer id) {
+	public Pedido find(Integer id) {
 		Optional<Pedido> obj = repo.findById(id);
 		//return obj.orElse(null);
 		return obj.orElseThrow(() -> new ObjectNotFoundException(
